@@ -1,7 +1,7 @@
 # Download and install nvm:
 wget https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh
-sudo chmod +x ./install.sh
-sudo bash ./install.sh
+sudo chmod +x install.sh
+sudo bash install.sh
 # in lieu of restarting the shell
 \. "$HOME/.nvm/nvm.sh"
 # Download and install Node.js:
