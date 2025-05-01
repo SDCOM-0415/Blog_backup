@@ -14,6 +14,8 @@ main:
           script: apt install bash sudo git wget curl -y
         - name: 拉取wordpress-export-to-markdown
           script: git clone https://github.com/lonekorean/wordpress-export-to-markdown.git
+        - name: 查看是否拉取成功
+          script: ls -a
         - name: 将文件移动至根目录
           script: mv ./wordpress-export-to-markdown ./
         - name: 查看是否移动成功
