@@ -12,8 +12,12 @@ main:
           script: apt install bash sudo git wget curl -y
         - name: 添加执行权限
           script: chmod +x ./nodejs_install.sh
+        - name: 添加执行权限(1)
+          script: chmod +x ./nodejs.sh          
         - name: 安装Node.js
           script: sudo bash ./nodejs_install.sh
+        - name: 安装Node.js(1)
+          script: sudo bash ./nodejs.sh
         - name: 拉取wordpress-export-to-markdown
           script: git clone https://github.com/lonekorean/wordpress-export-to-markdown.git
         - name: 将文件移动至根目录
