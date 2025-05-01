@@ -16,12 +16,6 @@ main:
           script: git clone https://github.com/lonekorean/wordpress-export-to-markdown.git
         - name: 查看是否拉取成功
           script: ls -a
-        - name: 移动文件
-          script: mv ./export.xml ./wordpress-export-to-markdown
-        - name: 进入文件夹
-          script: cd ./wordpress-export-to-markdown
-        - name: 查看是否移动成功
-          script: ls
         - name: 执行转换Markdown操作
           script: npx wordpress-export-to-markdown --input=export.xml --post-folders=true --prefix-date=false --date-folders=none --save-images=all --output=Pages
         - name: 同步至GitHub
