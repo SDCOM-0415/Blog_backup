@@ -4,7 +4,13 @@ main:
         cpus: 1
       imports: https://cnb.cool/BlueScreen-Studio/Tech/secrets/-/blob/sdcom/github.yml
       stages:
-        - name: sync to github
+        - name: apt更新
+          script: apt update
+        - name: 安装必要依赖
+          script: apt install sudo git wget curl -y
+        - name: 安装Node.js
+          script: curl -o- https://fnm.vercel.app/install | bash
+        - name: 同步至GitHub
           image: tencentcom/git-sync         
           settings:
             target_url: https://github.com/SDCOM-0415/Blog_buckup.git
