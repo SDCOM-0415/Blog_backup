@@ -4,7 +4,7 @@ main:
         cpus: 1
       imports: https://cnb.cool/BlueScreen-Studio/Tech/secrets/-/blob/sdcom/github.yml
       stages:
-        - name: ll
+        - name: 查看文件目录
           script: ll
         - name: apt更新
           script: apt update
@@ -12,6 +12,14 @@ main:
           script: apt install sudo git wget curl -y
         - name: 安装Node.js
           script: sudo ./nodejs_install.sh
+        - name: 拉取wordpress-export-to-markdown
+          script: git clone https://github.com/lonekorean/wordpress-export-to-markdown.git
+        - name: 将文件移动至根目录
+          script: mv ./wordpress-export-to-markdown ./
+        - name: 查看是否移动成功
+          script: ll
+        - name: 执行转换Markdown操作
+          script: npx wordpress-export-to-markdown --input=export.xml --post-folders=true --prefix-date=false --date-folders=none --save-images=all --output=Pages
         - name: 同步至GitHub
           image: tencentcom/git-sync         
           settings:
