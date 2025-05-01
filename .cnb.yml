@@ -2,6 +2,8 @@ main:
   push: 
     - runner: 
         cpus: 1
+      docker:
+        image: node:20
       imports: https://cnb.cool/BlueScreen-Studio/Tech/secrets/-/blob/sdcom/github.yml
       stages:
         - name: 查看文件目录
@@ -10,10 +12,6 @@ main:
           script: apt update
         - name: 安装必要依赖
           script: apt install bash sudo git wget curl -y
-        - name: 添加执行权限
-          script: chmod +x ./nodejs_install.sh        
-        - name: 安装Node.js
-          script: sudo bash ./nodejs_install.sh
         - name: 拉取wordpress-export-to-markdown
           script: git clone https://github.com/lonekorean/wordpress-export-to-markdown.git
         - name: 将文件移动至根目录
