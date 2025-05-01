@@ -17,7 +17,7 @@ main:
         - name: 查看是否拉取成功
           script: ls -a
         - name: 执行转换Markdown操作
-          script: npx wordpress-export-to-markdown --input=export.xml --post-folders=true --prefix-date=false --date-folders=none --save-images=all --output=Pages
+          script: npx wordpress-export-to-markdown --input=export.xml --post-folders=true --prefix-date=false --date-folders=none --save-images=all --output=/workspace
         - name: 同步至GitHub
           image: tencentcom/git-sync         
           settings:
