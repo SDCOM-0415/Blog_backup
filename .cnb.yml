@@ -8,6 +8,8 @@ main:
       stages:
         - name: 查看文件目录
           script: ls
+        - name: 清理历史文件
+          script: rm -rf ./posts
         - name: apt更新
           script: apt update
         - name: 安装必要依赖
@@ -17,13 +19,13 @@ main:
         - name: 查看是否拉取成功
           script: ls -a
         - name: 执行转换Markdown操作
-          script: npx wordpress-export-to-markdown --input=export.xml --post-folders=true --prefix-date=false --date-folders=none --save-images=all --output=/workspace
+          script: npx wordpress-export-to-markdown --input=export.xml --post-folders=true --prefix-date=false --date-folders=none --save-images=all --output=./
         - name: git push
           script: 
             - git config --local user.email "q6hqAsJ89h3Z8U2eF6AK8D+SDCOM@noreply.cnb.cool"
             - git config --local user.name "SDCOM"
             - git add posts/
-            - git commit "Updeta posts"
+            - git commit -m "Updeta posts"
             - git push -force
         - name: 同步至GitHub
           image: tencentcom/git-sync         
