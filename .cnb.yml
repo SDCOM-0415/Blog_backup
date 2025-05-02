@@ -4,7 +4,9 @@ main:
         cpus: 1
       docker:
         image: node:20
-      imports: https://cnb.cool/BlueScreen-Studio/Tech/secrets/-/blob/sdcom/github.yml
+      imports: 
+        - https://cnb.cool/BlueScreen-Studio/Tech/secrets/-/blob/sdcom/github.yml
+        - https://cnb.cool/BlueScreen-Studio/Tech/secrets/-/blob/sdcom/gitcode.yml
       stages:
         - name: 查看文件目录
           script: ls
@@ -36,6 +38,18 @@ main:
             password: ${GIT_ACCESS_TOKEN}
             git_user: ${GIT_USERNAME}
             git_email: ${GIT_EMAIL}
+            force: true
+            branch: main 
+            sync_mode: push
+        - name: 同步至GitCode.com
+          image: tencentcom/git-sync         
+          settings:
+            target_url: https://gitcode.com/SDCOM-0415/Blog_backup.git
+            auth_type: https
+            username: ${GIT_USER}
+            password: ${GIT_TOKEN}
+            git_user: ${GIT_USER}
+            git_email: ${GITCODE_EMAIL}
             force: true
             branch: main 
             sync_mode: push
