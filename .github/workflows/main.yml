@@ -17,12 +17,6 @@ jobs:
       with:
         node-version: '20'
 
-    - name: Update apt packages
-      run: apt update
-
-    - name: Install dependencies
-      run: apt install -y bash sudo git wget curl
-
     - name: Clone wordpress-export-to-markdown
       run: git clone https://github.com/lonekorean/wordpress-export-to-markdown.git
 
