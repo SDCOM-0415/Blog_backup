@@ -31,7 +31,7 @@ jobs:
       run: |
         git config --global user.email sdcom@sdcom.asia
         git config --global user.name SDCOM-0415
-        git add posts/
+        git add .
         git commit -m "Update posts"
       continue-on-error: true
 
@@ -44,5 +44,6 @@ jobs:
           -e PLUGIN_AUTH_TYPE="https" \
           -e PLUGIN_USERNAME="cnb" \
           -e PLUGIN_PASSWORD=${{ secrets.CNB_GIT_PASSWORD }} \
+          -e force="true" \
           -e PLUGIN_SYNC_MODE="push" \
           tencentcom/git-sync
