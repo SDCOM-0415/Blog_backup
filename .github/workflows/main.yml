@@ -31,9 +31,14 @@ jobs:
       run: |
         git config --global user.email sdcom@sdcom.asia
         git config --global user.name SDCOM-0415
-        git add .
+        git add posts/
         git commit -m "Update posts"
       continue-on-error: true
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Sync to CNB Repository
       run: |
