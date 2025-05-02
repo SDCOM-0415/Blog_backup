@@ -26,7 +26,7 @@ main:
             - git config --local user.name "SDCOM"
             - git add posts/
             - git commit -m "Updeta posts"
-            - git push -force
+            - git push --force
         - name: 同步至GitHub
           image: tencentcom/git-sync         
           settings:
