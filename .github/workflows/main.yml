@@ -7,6 +7,9 @@ on:
 jobs:
   export-to-markdown:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
 
     steps:
     - name: Checkout repository
@@ -29,8 +32,8 @@ jobs:
     - name: Commit
       id: commit
       run: |
-        git config --global user.email sdcom@sdcom.asia
-        git config --global user.name SDCOM-0415
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
         git add posts/
         git commit -m "Update posts"
       continue-on-error: true
@@ -42,7 +45,7 @@ jobs:
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.GIT_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: main
 
     - name: Sync to CNB Repository
