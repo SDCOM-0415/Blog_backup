@@ -1,0 +1,54 @@
+name: WordPress Export to Markdown
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  export-to-markdown:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
+    - name: Update apt packages
+      run: apt update
+
+    - name: Install dependencies
+      run: apt install -y bash sudo git wget curl
+
+    - name: Clone wordpress-export-to-markdown
+      run: git clone https://github.com/lonekorean/wordpress-export-to-markdown.git
+
+    - name: Check files
+      run: ls -a
+
+    - name: Convert to Markdown
+      run: npx wordpress-export-to-markdown --input=export.xml --post-folders=true --prefix-date=false --date-folders=none --save-images=all --output=./
+
+    - name: Commit
+      id: commit
+      run: |
+        git config --global user.email sdcom@sdcom.asia
+        git config --global user.name SDCOM-0415
+        git add posts/
+        git commit -m "Update posts"
+      continue-on-error: true
+
+    - name: Sync to CNB Repository
+      run: |
+        docker run --rm \
+          -v ${{ github.workspace }}:${{ github.workspace }} \
+          -w ${{ github.workspace }} \
+          -e PLUGIN_TARGET_URL="https://cnb.cool/SDCOM/Web/Blog_buckup.git" \
+          -e PLUGIN_AUTH_TYPE="https" \
+          -e PLUGIN_USERNAME="cnb" \
+          -e PLUGIN_PASSWORD=${{ secrets.CNB_GIT_PASSWORD }} \
+          -e PLUGIN_SYNC_MODE="push" \
+          tencentcom/git-sync
