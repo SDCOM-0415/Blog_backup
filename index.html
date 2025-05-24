@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>文档站点</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="一个使用Docsify构建的文档站点，包含各种技术教程和指南">
+  <meta name="keywords" content="文档,教程,Linux,macOS,技术指南">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#42b983">
+  <!-- 网站图标 -->
+  <link rel="icon" href="pic/tubiao.jpg">
+  <!-- Docsify 主题 -->
+  <link rel="stylesheet" href="//cdn.jsdmirror.cn/npm/docsify@4/lib/themes/vue.css">
+  <!-- 自定义样式 -->
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: '文档站点',
+      repo: '',
+      loadSidebar: true,
+      loadNavbar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+      relativePath: true,
+      mergeNavbar: true,
+      ext: '.md',
+      formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}',
+      pagination: {
+        previousText: '上一章',
+        nextText: '下一章',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+      notFoundPage: true,
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: '搜索',
+        noData: '找不到结果',
+        depth: 6
+      },
+      count:{
+        countable: true,
+        position: 'top',
+        margin: '10px',
+        float: 'right',
+        fontsize:'0.9em',
+        color:'rgb(90,90,90)',
+        language:'chinese',
+        localization: {
+          words: "",
+          minute: "分钟"
+        },
+        isExpected: true
+      }
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdmirror.cn/npm/docsify@4"></script>
+  <!-- 搜索插件 -->
+  <script src="//cdn.jsdmirror.cn/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- 图片缩放插件 -->
+  <script src="//cdn.jsdmirror.cn/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- 代码复制插件 -->
+  <script src="//cdn.jsdmirror.cn/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <!-- 字数统计插件 -->
+  <script src="//cdn.jsdmirror.cn/npm/docsify-count/dist/countable.js"></script>
+  <!-- 代码高亮 -->
+  <script src="//cdn.jsdmirror.cn/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdmirror.cn/npm/prismjs@1/components/prism-php.min.js"></script>
+  <script src="//cdn.jsdmirror.cn/npm/prismjs@1/components/prism-javascript.min.js"></script>
+  <script src="//cdn.jsdmirror.cn/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdmirror.cn/npm/prismjs@1/components/prism-json.min.js"></script>
+  <script src="//cdn.jsdmirror.cn/npm/prismjs@1/components/prism-markdown.min.js"></script>
+  
+  <!-- 分页导航 -->
+  <script src="//cdn.jsdmirror.cn/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  
+  <!-- 外部脚本 -->
+  <script src="//cdn.jsdmirror.cn/npm/docsify/lib/plugins/external-script.min.js"></script>
+  
+  <!-- 表情符号 -->
+  <script src="//cdn.jsdmirror.cn/npm/docsify/lib/plugins/emoji.min.js"></script>
+</body>
+</html>

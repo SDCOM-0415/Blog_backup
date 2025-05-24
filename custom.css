@@ -1,0 +1,83 @@
+/* 自定义样式 */
+
+:root {
+  --theme-color: #42b983;
+  --sidebar-width: 300px;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+  padding: 20px;
+}
+
+.sidebar-nav > ul > li > a {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+/* 内容区域样式 */
+.markdown-section {
+  max-width: 900px;
+  padding: 30px 15px;
+}
+
+.markdown-section h1 {
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 0.3em;
+}
+
+/* 图片样式 */
+.markdown-section img {
+  border: 1px solid #eee;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+}
+
+/* 代码块样式 */
+.markdown-section pre {
+  border-radius: 5px;
+}
+
+.markdown-section pre > code {
+  padding: 1.5em;
+  border-radius: 5px;
+}
+
+/* 移动设备适配 */
+@media screen and (max-width: 768px) {
+  :root {
+    --sidebar-width: 250px;
+  }
+  
+  .markdown-section {
+    padding: 20px 10px;
+  }
+}
+
+/* 文章目录样式 */
+.content .anchor span {
+  color: var(--theme-color);
+}
+
+/* 搜索框样式 */
+.search {
+  margin-bottom: 20px;
+  padding: 6px;
+  border-bottom: 1px solid #eee;
+}
+
+.search input {
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* 页脚样式 */
+.markdown-section > p:last-child {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  color: #7f8c8d;
+  font-size: 0.9em;
+}

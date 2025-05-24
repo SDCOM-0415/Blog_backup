@@ -1,0 +1,314 @@
+/* 基础样式设置 */
+:root {
+    --primary-color: #3498db;
+    --text-color: #2c3e50;
+    --background-color: #ffffff;
+    --sidebar-background: #f8f9fa;
+    --border-color: #e9ecef;
+    --header-height: 60px;
+    --sidebar-width: 260px;
+    --content-max-width: 800px;
+}
+
+/* 暗色模式 */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #60a5fa;
+        --text-color: #e2e8f0;
+        --background-color: #1a1a1a;
+        --sidebar-background: #242424;
+        --border-color: #333333;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* 容器布局 */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 头部样式 */
+header {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: var(--primary-color);
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+/* 主要内容区域 */
+main {
+    display: flex;
+    margin-top: var(--header-height);
+    flex: 1;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--sidebar-background);
+    border-right: 1px solid var(--border-color);
+    padding: 2rem;
+    position: fixed;
+    top: var(--header-height);
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+#toc ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+#toc li {
+    margin: 0.5rem 0;
+}
+
+#toc a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 0.3rem 0;
+    transition: color 0.3s ease;
+}
+
+#toc a:hover {
+    color: var(--primary-color);
+}
+
+.toc-h1 { margin-left: 0; }
+.toc-h2 { margin-left: 1rem; }
+.toc-h3 { margin-left: 2rem; }
+
+/* 内容区域样式 */
+.content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    padding: 2rem;
+    max-width: calc(var(--content-max-width) + 4rem);
+}
+
+/* Markdown 内容样式 */
+.content h1 {
+    font-size: 2.5rem;
+    margin: 2rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin: 2rem 0 1rem;
+}
+
+.content h3 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem;
+}
+
+.content p {
+    margin: 1rem 0;
+    line-height: 1.8;
+}
+
+.content ul, .content ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.content li {
+    margin: 0.5rem 0;
+}
+
+.content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--primary-color);
+}
+
+.content a:hover {
+    border-bottom-style: solid;
+}
+
+.content blockquote {
+    margin: 1rem 0;
+    padding: 1rem;
+    border-left: 4px solid var(--primary-color);
+    background-color: var(--sidebar-background);
+    border-radius: 0 4px 4px 0;
+}
+
+.content code {
+    background-color: var(--sidebar-background);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    font-size: 0.9em;
+}
+
+.content pre {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: var(--sidebar-background);
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.content pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.content th, .content td {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+}
+
+.content th {
+    background-color: var(--sidebar-background);
+    font-weight: 600;
+}
+
+/* 加载动画 */
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--sidebar-background);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* 错误提示样式 */
+.error {
+    padding: 2rem;
+    text-align: center;
+    color: #e74c3c;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    :root {
+        --sidebar-width: 0px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    header {
+        padding: 0 1rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .content h3 {
+        font-size: 1.25rem;
+    }
+}
