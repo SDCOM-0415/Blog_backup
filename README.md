@@ -1,6 +1,14 @@
 # 欢迎来到文档站点
-
 这是一个使用 Docsify 构建的文档站点，用于展示和组织各种文档内容。
+
+## 关于本仓库
+仓库地址：</p>
+<img src="https://cnb.cool/images/favicon.png" style="height: 1em; vertical-align: middle;" alt="CNB图标"> [CNB](https://cnb.cool/SDCOM/Web/Blog_backup "https://cnb.cool/SDCOM/Web/Blog_backup") 
+<img src="pic/github-favicon.png" style="height: 1em; vertical-align: middle;" alt="GitHub图标"> [GitHub](https://github.com/SDCOM-0415/Blog_backup "https://github.com/SDCOM-0415/Blog_backup") </p>
+访问地址：</p>
+https://blog-buckup.sdcom.asia/
+https://blog-buckup.netlify.app/
+
 
 ## 使用指南
 
