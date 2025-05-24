@@ -1,6 +1,8 @@
 # 欢迎来到文档站点
 这是一个使用 Docsify 构建的文档站点，用于展示和组织各种文档内容。
 
+# 运行状态：[![Netlify Status](https://api.netlify.com/api/v1/badges/3d4ef03e-e916-422a-8f38-14b166f9d7e3/deploy-status)](https://app.netlify.com/projects/blog-buckup/deploys)
+
 ## 关于本仓库
 仓库地址：</p>
 <img src="https://cnb.cool/images/favicon.png" style="height: 1em; vertical-align: middle;" alt="CNB图标"> [CNB](https://cnb.cool/SDCOM/Web/Blog_backup "https://cnb.cool/SDCOM/Web/Blog_backup") 
