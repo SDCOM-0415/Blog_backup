@@ -1,3 +1,32 @@
+$:
+# 网页远程开发
+  vscode:
+  - services:
+    - docker
+    - vscode
+    runner:
+      cpus: 1
+    docker:
+      build: .ide/Dockerfile
+    env:
+      CNB_WELCOME_CMD: fastfetch
+    stages:
+      - name: update dependencies
+        script: fastfetch
+
+# VS code打开   
+  api_trigger_cnb_dev_plugin:
+  - services:
+    - docker
+    - vscode
+    docker:
+      build: .ide/Dockerfile
+    env:
+      CNB_WELCOME_CMD: fastfetch
+    stages:
+      - name: update dependencies
+        script: fastfetch
+        
 main:
   push: 
     - runner: 
