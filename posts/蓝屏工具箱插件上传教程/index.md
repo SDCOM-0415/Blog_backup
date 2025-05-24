@@ -11,39 +11,39 @@ date: 2024-06-01
 
 1.安装并打开蓝屏工具箱
 
-![](images/16_42_31_Snipaste_2024-06-01_16-42-20.png)
+![](images/image-1.png)
 
 2.注册你的账号
 
-![](images/16_45_4_Snipaste_2024-06-01_16-44-52.png)
+![](images/image-2.png)
 
 注册完了是这样的，等待进入主页面
 
-![](images/16_48_42_202406011648872.png)
+![](images/image-3.png)
 
 3.进入主页后点击设置
 
-![](images/17_0_26_202406011700495.png)
+![](images/image-4.png)
 
 4.点击"成为开发者"
 
-![](images/17_2_59_202406011702832.png)
+![](images/image-5.png)
 
 5.点击商店进入插件市场
 
 6.选择我要上传
 
-![](images/17_17_37_202406011717759.png)
+![](images/image-6.png)
 
 7.填写你要上传的插件信息
 
-![](images/17_18_30_202406011718783.png)
+![](images/image-7.png)
 
 8.选择主程序上传并等待审核
 
-![](images/17_32_48_202406011732637.png)
+![](images/image-8.png)
 
-![](images/17_34_42_202406011734996.png)
+![](images/image-9.png)
 
 ## 视频教程
 

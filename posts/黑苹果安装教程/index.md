@@ -13,7 +13,7 @@ Welcome！
 
 - Mac OS镜像、Etcher（刻录工具）、DiskGenius（分区工具）、EFI驱动文件（Big Sur以下推荐使用CLOVER，以上则推荐使用OC）。
 
-- 下载地址：[macOS | SDCOMの下载站](https://dz.sdcom.asia/OneDrive-E5/%E9%95%9C%E5%83%8F%E5%BA%93/macOS)
+- 下载地址：[macOS | SDCOMの下载站](https://alist.sdcom.cnstlapy.cn/OneDrive-E5/%E9%95%9C%E5%83%8F%E5%BA%93/macOS)
 
 ## **制作启动U盘**
 
@@ -97,13 +97,13 @@ Welcome！
 
 14.一路同意默认下一步即可；第一次安装界面:
 
-![](images/retouch_2023071416474363-1024x576.jpg)
+![](images/60ffa8c67fc42d4f3aebe356fcdd2305.jpg)
 
 15.第一次安装完后会重启，重启还是选U盘启动，进入四叶草选择 Boot MacOS from X，（X你刚刚抹掉的那个安装盘的名字）过一会儿会进入正式安装界面。
 
 二次安装界面:
 
-![](images/retouch_2023071416494455-1-1024x576.jpg)
+![](images/e11c8ef1033f54e5738e6f032b6bea52.jpg)
 
 16.二次安装完，黑苹果就安装到你的硬盘了，重启后还是选U盘启动，进入引导页面选择 X（你抹掉磁盘的名字），进入苹果系统；
 

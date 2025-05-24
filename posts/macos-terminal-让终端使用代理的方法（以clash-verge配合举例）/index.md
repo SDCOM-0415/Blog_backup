@@ -9,11 +9,11 @@ date: 2024-05-26
 
 更新后，服务器管理页面多出了一个Apple 的图标，这就意味着在macOS上可以像Windows或者Linux那样一键安装了
 
-![](images/16_56_20_202405261656562.png)
+![](images/image-17.png)
 
 但是，当我满怀欣喜的运行时，却没有办法来正常的运行
 
-![](images/16_58_7_202405261658921.png)
+![](images/image-18.png)
 
 这是因为我们在国内，没有办法来流畅链接GitHub，虽然我们能使用代理，不过终端显然不认，所以就有了这一篇文章
 
@@ -23,7 +23,7 @@ date: 2024-05-26
 
 ### 查看代理软件端口
 
-![](images/17_4_15_202405261704281.png)
+![](images/image-19.png)
 
 ## 开始配置
 
@@ -64,13 +64,13 @@ alias unproxy="
     unset NO_PROXY"
 ```
 
-![](images/17_14_42_202405261714015.png)
+![](images/image-20.png)
 
 粘贴成功后，确保处于终端App窗口且已激活当前窗口；按键盘左上角`**esc**`，输入法切换至英文(abc)模式，输入`:wq!`，回车（跟Linux 终端命令行一模一样...）
 
-![](images/17_15_42_202405261715142.png)
+![](images/image-21.png)
 
-![](images/17_16_0_202405261716971.png)
+![](images/image-22.png)
 
 3.使用 .zshrc
 
@@ -91,7 +91,7 @@ curl ip.sb
 178.173.236.224   # 代理服务器IP地址
 ```
 
-![](images/17_21_31_202405261721547.png)
+![](images/image-23.png)
 
 5.取消代理
 
@@ -138,12 +138,12 @@ proxy_off
 
 将代理软件**Tun模式**打开(只有部分软件有**Tun模式**，不推荐使用)
 
-![](images/17_24_52_202405261724698.png)
+![](images/image-24.png)
 
 ## 结尾
 
 还是部署在我的黑苹果上面成功的部署了nezha\_Agent，本次文章的难度远没有其他文章的难度高，已经算很方便的了，还是感谢[nezha](https://github.com/nezhahq/)这个项目的开发人员吧
 
-![](images/0_10_24_17_27_3_telegram-cloud-photo-size-5-6239739405891910715-x.png)
+![](images/image-25.png)
 
-![](images/17_28_56_202405261728896.png)
+![](images/image-26.png)

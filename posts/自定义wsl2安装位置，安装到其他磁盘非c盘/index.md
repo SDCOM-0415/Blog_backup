@@ -73,7 +73,7 @@ wsl --set-default-version 2
 
 不过微软的下载很慢，我这边使用了魔法都还是有些慢，所以这边也提供123网盘的部分系统
 
-**[IPv6版下载站](http://home-v6.sdcom.asia:5244/123pan/1/Apps/Windows/WSL)** [IPv4下载站](http://alist.sdcom.asia/123pan/1/Apps/Windows/WSL)
+[123官方链接](https://www.123865.com/s/bCwtVv-3RZeh) [CNB](https://cnb.cool/SDCOM_File/437.html/-/tree/main/WSL) [IPv4下载站](http://alist.sdcom.asia/123pan/1/Apps/Windows/WSL)
 
 ![](images/20240816183807image807.png)
 

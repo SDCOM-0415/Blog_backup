@@ -35,4 +35,4 @@ date: 2023-07-14
 
 ## 下载地址
 
-[冰与火之物2.5.0-steam.dmg | SDCOMの下载站](https://dz.sdcom.asia/OneDrive-E5/%E8%BD%AF%E4%BB%B6/macOS/%E5%86%B0%E4%B8%8E%E7%81%AB%E4%B9%8B%E7%89%A92.5.0-steam.dmg)
+[冰与火之物2.5.0-steam.dmg | SDCOMの下载站](https://alist.sdcom.cnstlapy.cn/OneDrive-E5/%E8%BD%AF%E4%BB%B6/macOS/%E5%86%B0%E4%B8%8E%E7%81%AB%E4%B9%8B%E7%89%A92.5.0-steam.dmg)

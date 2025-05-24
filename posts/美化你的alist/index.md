@@ -7,7 +7,7 @@ date: 2023-09-02
 
 某天，我闲来无事逛逛纸飞机，然后，就发现了一个视频，来美化我们的alist
 
-所以我就想着把我的美化了。先看[最终效果](https://dz.sdcom.asia/)
+所以我就想着把我的美化了。先看[最终效果](https://alist.sdcom.cnstlapy.cn/)
 
 ![](images/640-1024x536.png)
 
@@ -33,7 +33,7 @@ date: 2023-09-02
 
 将演示代码粘贴进入自定义头部和自定义内容
 
-注：若不想从网站复制，点击[此处](https://dz.sdcom.asia/lanzou/%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B%E4%BB%A3%E7%A0%81.zip)下载
+注：若不想从网站复制，点击[此处](https://alist.sdcom.cnstlapy.cn/lanzou/%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B%E4%BB%A3%E7%A0%81.zip)下载
 
 **自定义头部**
 

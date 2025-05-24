@@ -37,7 +37,7 @@ _温馨提示：oclp可能会造成软件无法更新，无法正常使用，崩
 
 下载链接：
 
-oclp（OpenCore-Legacy-Patcher）：[官方GitHub](https://github.com/dortania/OpenCore-Legacy-Patcher/releases) [下载站](https://dz.sdcom.asia/123pan/1/Apps/macOS/oclp)
+oclp（OpenCore-Legacy-Patcher）：[官方GitHub](https://github.com/dortania/OpenCore-Legacy-Patcher/releases) [下载站](https://alist.sdcom.cnstlapy.cn/123pan/1/Apps/macOS/oclp)
 
 ocat（OCAuxiliaryTools）：[官方GitHub](https://github.com/ic005k/OCAuxiliaryTools/releases) [蓝奏云](https://sdcom.lanzouy.com/b02310o8j)(密码:1234)
 

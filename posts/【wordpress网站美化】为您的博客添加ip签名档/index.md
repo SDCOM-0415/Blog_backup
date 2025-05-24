@@ -35,7 +35,7 @@ date: 2023-10-03
 
 ### 源码下载
 
-[ipsignature.zip](https://dz.sdcom.asia/lanzou/ipsignature.zip)
+[ipsignature.zip](https://alist.sdcom.cnstlapy.cn/lanzou/ipsignature.zip)
 
 ### 部署文件及申请API
 

@@ -11,7 +11,7 @@ date: 2024-07-22
 
 这个路由器的CPU采用的是联发科 FiLogic 820系列的MT7981，12nm 双核A53架构，12nm工艺制程，1.3GHz主频（有那么一点点的烫）
 
-![](images/17_15_9_202407211715289.png)
+![](images/image.png)
 
 内存呢，是256MB(RAM)+128MB(ROM)的组合
 
@@ -33,13 +33,13 @@ date: 2024-07-22
 
 ## 文件下载
 
-[Gitcode](https://gitcode.net/SDCOM_0415/img/-/raw/master/pictures/2024/07/21/%E5%B0%8F%E7%B1%B3ax3000t%E5%88%B7%E6%9C%BA%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7.zip) [腾讯云COS](https://sdcom.cnstlapy.cn/wp-content/uploads/PicGo/%E5%B0%8F%E7%B1%B3ax3000t%E5%88%B7%E6%9C%BA%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7.zip) [123网盘](https://www.123pan.com/s/bCwtVv-gsSeh.html)
+[CNB](https://cnb.cool/SDCOM_File/img/-/git/raw/master/pictures/2024/07/21/%E5%B0%8F%E7%B1%B3ax3000t%E5%88%B7%E6%9C%BA%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7.zip) [123网盘](https://www.123pan.com/s/bCwtVv-gsSeh.html)
 
 ## 安装
 
 ### 降级固件（如果是1.0.47跳过此步骤）
 
-![](images/17_25_45_WechatIMG337.jpg)
+![](images/image-1.png)
 
 **刷机前的准备工作，下载好开头的文件**
 
@@ -57,7 +57,7 @@ Win系统一定要关闭自带防火墙等杀毒软件)
 
 **用卡针顶住路由器reset 恢复按钮，再插上电源。持续按住reset按键8s左右，看到指示灯闪烁**
 
-![](images/15_37_29_202407221537119.png)
+![](images/image-2.png)
 
 **并上传一个文件夹中1.0.47固件。上传成功后等待3-5分钟，看路由器的蓝灯闪烁。就可以手动断电重启路由，这时路由器就降级为1.0.47系统了**
 
@@ -65,13 +65,13 @@ Win系统一定要关闭自带防火墙等杀毒软件)
 
 **注意：路由器的IP不一定是192.168.31.1, 可以通过“ping miwifi.com”来确认IP address**
 
-![](images/15_39_44_202407221539507.png)
+![](images/image-3.png)
 
 先登录路由器后台，获取到stok，复制红框中高亮的部分，把以下代码的中“你的值”替换即可
 
 在window中win+r 输入cmd
 
-![](images/15_41_14_202407221541081.png)
+![](images/image-4.png)
 
 依次输入如下命令：
 
@@ -87,7 +87,7 @@ curl -X POST http://192.168.31.1/cgi-bin/luci/;stok=你的值/api/misystem/arn_
 
 每条命令输入回车后会弹出{code：0} 至此ssh已经解锁成功！
 
-![](images/15_42_54_202407221542878.png)
+![](images/image-5.png)
 
 **如果出现报错：cURL不是内部或外部命令，也不是可运行的程序，请自行Bing或者Google解决**
 
@@ -97,7 +97,7 @@ curl -X POST http://192.168.31.1/cgi-bin/luci/;stok=你的值/api/misystem/arn_
 
 先得通过SN计算才能得出，SN在下图中，画框中的全部复制
 
-![](images/15_48_1_202407221548554.png)
+![](images/image-6.png)
 
 通过这个[Xiaomi Router Developer Guide & Tools](https://miwifi.dev/ssh) 网址输入sn就能得出
 
@@ -105,15 +105,15 @@ curl -X POST http://192.168.31.1/cgi-bin/luci/;stok=你的值/api/misystem/arn_
 
 把MobaXterm\_Portable\_v22.1.zip压缩包解压后，连接路由器ssh
 
-![](images/15_55_19_202407221555090.png)
+![](images/image-7.png)
 
-![](images/15_56_18_202407221556526.png)
+![](images/image-8.png)
 
-![](images/15_57_42_202407221557027.png)
+![](images/image-9.png)
 
 选择OK，然后再OK
 
-![](images/15_59_0_202407221559955.png)
+![](images/image-10.png)
 
 OK后就会出现弹框，点击ACCEPT
 
@@ -125,7 +125,7 @@ OK后就会出现弹框，点击ACCEPT
 
 输入 `cat /proc/mtd` 回车
 
-![](images/16_4_12_202407221604949.png)
+![](images/image-11.png)
 
 备份所有分区
 
@@ -157,11 +157,11 @@ dd if=/dev/mtd12 of=/tmp/KF.bin
 
 复制粘贴回车命令看到这个in out就代表备份成功了
 
-![](images/16_8_7_3481721635527_.pic.jpg)
+![](images/image-12.png)
 
 我们去tmp目录把他复制出来 就可以删除了
 
-![](images/16_10_8_d7d7a1a3d85ee3ea030c97939883667c.png)
+![](images/image-13.png)
 
 以此类推可以全部备份出来
 
@@ -193,41 +193,41 @@ mtd write mt7981_ax3000t-fip-fixed-parts-multi-layout.bin FIP #回车输入uboot
 
 在浏览器里输入192.168.1.1，就能见到uboot的ui界面了（如果未能够进入，请手动设置电脑IP为192.168.1.114）
 
-![](images/16_16_39_202407221616660.png)
+![](images/image-14.png)
 
 以后我们就可以直接在uboot界面里选择qwrt，上传网盘中的`openwrt-mediatek-R23.11.11-mt7981-xiaomi_mi-router-ax3000t-squashfs-sysupgrade.bin`固件就可以了。大概三到五分钟就能刷入成功，重启路由就搞定了，重启后电脑设置自动获取IP，固件后台地址192.168.1.1；登录名`root` 密码 `password`
 
-![](images/16_18_23_202407221618133.png)
+![](images/image-15.png)
 
-![](images/16_18_59_202407221618973.png)
+![](images/image-17.png)
 
 ## 插件的管理
 
 这个固件内置了一些插件（原本有openClash和ShadowSocksR Plus+，但是因为兼容问题换成了passwall），是足够日常使用的，如果觉得不够的话可以手动安装
 
-![](images/16_21_35_202407221621790.png)
+![](images/image-16.png)
 
 ### 安装
 
 用之前刷openwrt的ssh连接工具，连接到路由器
 
-![](images/16_24_6_202407221624518.png)
+![](images/image-18.png)
 
-![](images/16_24_48_202407221624806.png)
+![](images/image-19.png)
 
-![](images/16_25_46_202407221625765.png)
+![](images/image-20.png)
 
-![](images/16_26_55_202407221626755.png)
+![](images/image-21.png)
 
 点击OK，在点一次OK，连接ssh
 
-![](images/16_29_53_202407221629435.png)
+![](images/image-22.png)
 
 将想要的插件拖进左边的文件管理中
 
 输入`opkg install 插件名.ipk`
 
-![](images/16_33_22_202407221633994.png)
+![](images/image-23.png)
 
 只要没有任何的报错，那么就是安装成功了
 
@@ -235,11 +235,11 @@ mtd write mt7981_ax3000t-fip-fixed-parts-multi-layout.bin FIP #回车输入uboot
 
 在openwrt的后台，选择系统>软件包
 
-![](images/16_36_3_202407221636115.png)
+![](images/image-24.png)
 
 找到你想卸载的插件，点击旁边的移除，就能卸载了
 
-![](images/16_37_29_202407221637303.png)
+![](images/image-25.png)
 
 如果没有报错，那么就是卸载成功了
 

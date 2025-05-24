@@ -185,7 +185,7 @@ date: 2024-08-02
 
 ##### 下载（自行选择自己设备的架构）（镜像v2.10.5）
 
-[GitHub](https://github.com/gdy666/luci-app-lucky/releases/) [GitCode](https://gitcode.net/SDCOM_0415/img/-/raw/master/pictures/2024/08/2/21_19_8_lucky.zip) [腾讯云COS](https://sdcom.cnstlapy.cn/wp-content/uploads/PicGo/lucky.zip) [蓝奏云](https://sdcom.lanzouo.com/b0swyqned)(密码1234) [下载站](http://home-v6.sdcom.asia:5244/lanzou/lucky)(限时返场，仅限IPv6，为本期文章的成果)
+[GitHub](https://github.com/gdy666/luci-app-lucky/releases/) [GitCode](https://cnb.cool/SDCOM_File/img/-/git/raw/master/pictures/2024/08/2/21_19_8_lucky.zip) [腾讯云COS](https://sdcom.cnstlapy.cn/wp-content/uploads/PicGo/lucky.zip) [蓝奏云](https://sdcom.lanzouo.com/b0swyqned)(密码1234) [下载站](http://alist.sdcom.cnstlapy.cn/lanzou/lucky)(限时返场，仅限IPv6，为本期文章的成果)
 
 ##### 安装
 
