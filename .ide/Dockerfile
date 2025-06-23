@@ -7,7 +7,7 @@ FROM cnbcool/default-dev-env:latest
 RUN apt-get update && apt-get install -y git sudo vim curl 
 
 # 安装 code-server 和 vscode 常用插件
-RUN curl -fsSL https://code-server.dev/install.sh | sh \
+RUN curl -fsSL https://code-server.dev/install.sh | sh -s -- --version 4.100.3 \
   && code-server --install-extension cnbcool.cnb-welcome \
   && code-server --install-extension redhat.vscode-yaml \
   && code-server --install-extension detachhead.basedpyright \
@@ -20,6 +20,8 @@ RUN curl -fsSL https://code-server.dev/install.sh | sh \
   && code-server --install-extension waderyan.gitblame \
   && code-server --install-extension donjayamanne.githistory \
   && code-server --install-extension yandeu.five-server \
+  && wget https://cnb.cool/SDCOM/moren/node/-/git/raw/main/.ide/argv.json -O /root/.local/share/code-server/User/argv.json \
+  && wget https://cnb.cool/SDCOM/moren/node/-/git/raw/main/.ide/languagepacks.json -O /root/.local/share/code-server/languagepacks.json \  
   && echo done
 
 # 安装 ssh 服务，用于支持 VSCode 客户端通过 Remote-SSH 访问开发环境
